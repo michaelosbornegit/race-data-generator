@@ -26,4 +26,4 @@ I did this as an experiment to see how easy it would be using a Nix dev containe
 1. the race generator will show up in the fluxbox window
 
 
-1. to edit the scene using scenebuilder run scenebuilder ./src/main/java/view/Controller.fxml
+1. to edit the scene using scenebuilder run `scenebuilder ./src/main/java/view/Controller.fxml`
