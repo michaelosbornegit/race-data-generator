@@ -17,20 +17,12 @@
       in pkgs.mkShell {
         buildInputs = with pkgs; [
           zsh
-          jdk11
           scenebuilder
           maven
-          glibc
-          # nodejs_20
-          # htop
-          # python3
-          # docker
-          # azure-cli
-          # terraform
-          # dotnet-sdk_8
-          # neo-cowsay
-          # gh
         ];
+
+        JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64";
+        
       };
     in
     {

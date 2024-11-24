@@ -1,10 +1,11 @@
 FROM debian:stable-slim
 
 # Update and install required packages
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
     direnv \
     sudo \
-    git
+    git \
+    openjdk-17-jdk
 
 # Create vscode user and add to sudo group
 RUN useradd -m -s /bin/bash vscode && \

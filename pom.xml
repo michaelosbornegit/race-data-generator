@@ -12,8 +12,8 @@
     <!-- Project properties -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.11</java.version>
-        <javafx.version>11</javafx.version>
+        <java.version>1.17</java.version>
+        <javafx.version>17</javafx.version>
     </properties>
 
     <!-- Dependencies -->
@@ -72,50 +72,9 @@
                 <version>3.1.0</version>
                 <configuration>
                     <mainClass>application.Main</mainClass> <!-- Replace with your main class -->
-                    <arguments>
-                        <argument>-Djavafx.platform=${javafx.platform}</argument>
-                        <argument>-Dprism.order=sw</argument>
-                    </arguments>
                 </configuration>
             </plugin>
 
         </plugins>
     </build>
-
-    <!-- Profiles for platform-specific JavaFX binaries -->
-    <profiles>
-        <profile>
-            <id>linux</id>
-            <activation>
-                <os>
-                    <family>unix</family>
-                </os>
-            </activation>
-            <properties>
-                <javafx.platform>linux</javafx.platform>
-            </properties>
-        </profile>
-        <profile>
-            <id>windows</id>
-            <activation>
-                <os>
-                    <family>windows</family>
-                </os>
-            </activation>
-            <properties>
-                <javafx.platform>win</javafx.platform>
-            </properties>
-        </profile>
-        <profile>
-            <id>mac</id>
-            <activation>
-                <os>
-                    <family>mac</family>
-                </os>
-            </activation>
-            <properties>
-                <javafx.platform>mac</javafx.platform>
-            </properties>
-        </profile>
-    </profiles>
 </project>
