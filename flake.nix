@@ -17,8 +17,10 @@
       in pkgs.mkShell {
         buildInputs = with pkgs; [
           zsh
-          jdk8
+          jdk11
           scenebuilder
+          maven
+          glibc
           # nodejs_20
           # htop
           # python3

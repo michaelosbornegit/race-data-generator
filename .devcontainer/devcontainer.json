@@ -23,5 +23,6 @@
     }
   },
   "runArgs": ["--name", "race-data-generator_devcontainer"],
-  "postCreateCommand": "chown -R root /workspaces && direnv allow && nix develop --command bash /tmp/post-install-setup.sh"
+  "postCreateCommand": "sudo chown -R vscode /workspaces && direnv allow . && nix develop --command bash /tmp/post-install-setup.sh",
+  "remoteUser": "vscode"
 }

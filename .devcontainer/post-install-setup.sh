@@ -1,6 +1,3 @@
-# Own workspaces
-chown -R root /workspaces
-
 # Use official oh-my-zsh installer
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -14,7 +11,10 @@ echo 'znap source marlonrichert/zsh-autocomplete' >> ~/.zshrc && \
     echo 'znap source zsh-users/zsh-syntax-highlighting' >> ~/.zshrc
 
 # Add direnv to bash
-eval "$(direnv hook bash)" >> ~/.bashrc
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+
+# Add direnv to zsh
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 
 # load zsh if bash loads
 echo 'exec zsh' >> ~/.bashrc
